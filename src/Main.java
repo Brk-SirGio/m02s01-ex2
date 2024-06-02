@@ -1,15 +1,26 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        //salário mínimo em 2024
+        final double SALARIO_MINIMO = 1412.00;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        //Scanner
+        Scanner scanner = new Scanner(System.in);
+
+        // Input do user
+        System.out.print("Informe o seu salário: R$ ");
+        double salarioUsuario = scanner.nextDouble();
+
+        // Calculo
+        double quantidadeSalariosMinimos = salarioUsuario / SALARIO_MINIMO;
+
+        // Resultado
+        System.out.printf("Você recebe %.2f salários mínimos.\n", quantidadeSalariosMinimos);
+
+        // Fecha o scanner
+        scanner.close();
+
+
         }
     }
-}
